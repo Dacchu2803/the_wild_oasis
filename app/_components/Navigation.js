@@ -1,19 +1,26 @@
-import Link from "next/link";
-
-export default function Navigation(){
-    return <ul>
+export default function Navigation() {
+  return (
+    <nav className="z-10 text-xl">
+      <ul className="flex gap-16 items-center">
         <li>
-            <Link href="/">Home</Link>
+          <a href="/cabins" className="hover:text-accent-400 transition-colors">
+            Cabins
+          </a>
         </li>
-         <li>
-            <Link href="/account">Your Account</Link>
+        <li>
+          <a href="/about" className="hover:text-accent-400 transition-colors">
+            About
+          </a>
         </li>
-         <li>
-            <Link href="/about">About</Link>
+        <li>
+          <a
+            href="/account"
+            className="hover:text-accent-400 transition-colors"
+          >
+            Guest area
+          </a>
         </li>
-         <li>
-            <Link href="/cabins">Cabins</Link>
-        </li>
-
-    </ul>
+      </ul>
+    </nav>
+  );
 }
